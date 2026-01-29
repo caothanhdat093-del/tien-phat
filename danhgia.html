@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh giá & Góp ý - Du lịch Miền Tây</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/320px-Flag_of_Vietnam.svg.png" alt="Logo">
+                <h1>Du lịch Miền Tây</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="bentre.html">Bến Tre</a></li>
+                    <li><a href="vinhlong.html">Vĩnh Long</a></li>
+                    <li><a href="travinh.html">Trà Vinh</a></li>
+                    <li><a href="danhgia.html" class="active">Đánh giá</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="content-section">
+            <h2 class="section-title">🌟 Cảm nhận từ Du khách</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p class="review-content">"Chuyến đi thật tuyệt vời! Cảnh đẹp yên bình, con người Vĩnh Long vô cùng mến khách. Tôi rất thích món cá tai tượng chiên xù ở đây."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150" class="reviewer-avatar" alt="Avatar">
+                        <div class="reviewer-details">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <span>Du khách từ Hà Nội</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <p class="review-content">"Kẹo dừa Bến Tre ngon tuyệt đỉnh! Cảm giác chèo xuồng ba lá len lỏi qua các rạch nhỏ thật sự rất thú vị và thư giãn."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150" class="reviewer-avatar" alt="Avatar">
+                        <div class="reviewer-details">
+                            <h4>Trần Văn Minh</h4>
+                            <span>Du khách từ Đà Nẵng</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <p class="review-content">"Kiến trúc chùa Khmer ở Trà Vinh đẹp đến ngỡ ngàng. Một vùng đất giao thoa văn hóa rất đáng để khám phá một lần trong đời."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150" class="reviewer-avatar" alt="Avatar">
+                        <div class="reviewer-details">
+                            <h4>Lê Thu Thảo</h4>
+                            <span>Du khách từ TP.HCM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="feedback-section">
+                <h2>📩 Gửi Góp Ý Của Bạn</h2>
+                <p style="text-align: center; margin-bottom: 20px; color: #666;">Chúng tôi luôn lắng nghe để hoàn thiện hơn mỗi ngày.</p>
+                
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Họ và tên của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email liên hệ (nếu có)" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" rows="5" placeholder="Chia sẻ cảm nhận hoặc góp ý của bạn..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit-review">Gửi Đánh Giá Ngay</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Website Du lịch Vĩnh Long mở rộng</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() { document.body.classList.add('page-loaded'); }, 100);
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetUrl = this.getAttribute('href');
+                    if (targetUrl && !targetUrl.startsWith('#') && targetUrl !== '#' && this.target !== '_blank') {
+                        e.preventDefault();
+                        document.body.classList.remove('page-loaded');
+                        setTimeout(function() { window.location.href = targetUrl; }, 500); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
